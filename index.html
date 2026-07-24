@@ -1,300 +1,65 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- SEO Meta Tags -->
-    <title>AI Growth Hub | Direktori Tools AI & Prompt Generator Premium</title>
-    <meta name="description" content="Temukan ratusan tools AI terbaik, buat prompt otomatis, dan baca panduan SEO terbaru di AI Growth Hub. Tingkatkan produktivitas Anda sekarang.">
-    <meta name="keywords" content="AI tools, prompt generator, ChatGPT prompts, AI SEO, direktori AI, belajar AI">
-    <meta name="author" content="AI Growth Hub">
-    <meta name="robots" content="index, follow">
-
-    <!-- Open Graph / Social Media -->
-    <meta property="og:title" content="AI Growth Hub | Direktori Tools AI & Prompt Premium">
-    <meta property="og:description" content="Temukan tools AI terbaik dan optimalkan kerjamu dengan Prompt Generator kami.">
-    <meta property="og:image" content="assets/images/og-image.jpg">
-    <meta property="og:url" content="https://aigrowthhub.com">
-    <meta property="og:type" content="website">
-
-    <!-- JSON-LD Schema -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "AI Growth Hub",
-      "url": "https://aigrowthhub.com",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://aigrowthhub.com/search?q={search_term_string}",
-        "query-input": "required name=search_term_string"
-      }
-    }
-    </script>
-
-    <!-- Google Fonts & Icons -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <!-- Stylesheet -->
+    <title>AI Growth Hub | Free AI Tools, Prompts & Creator Resources</title>
+    <meta name="description" content="Discover free AI tools, high-converting prompts, SEO resources, and growth strategies for digital creators and businesses.">
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="dark-theme">
+<body>
+    <!-- Background Glow Effects -->
+    <div class="glow glow-1"></div>
+    <div class="glow glow-2"></div>
 
-    <!-- Background Elements -->
-    <div class="bg-glow glow-1"></div>
-    <div class="bg-glow glow-2"></div>
-
-    <!-- Navbar -->
+    <!-- Header / Navbar -->
     <header class="navbar">
-        <div class="container nav-wrapper">
-            <a href="index.html" class="logo">
-                <i class="fa-solid fa-brain"></i>
-                <span>AI Growth <strong>Hub</strong></span>
-            </a>
-            <button class="mobile-menu-btn" aria-label="Toggle Menu">
-                <i class="fa-solid fa-bars"></i>
-            </button>
-            <nav class="nav-links">
-                <a href="#tools">AI Tools</a>
-                <a href="#prompts">Prompt Generator</a>
-                <a href="#categories">Kategori</a>
-                <a href="#blog">Blog SEO</a>
-                <a href="#faq">FAQ</a>
-                <a href="contact.html" class="btn btn-primary">Submit Tool</a>
-            </nav>
-        </div>
+        <div class="logo">AI Growth <span>Hub</span></div>
+        <nav>
+            <a href="#tools">Tools</a>
+            <a href="#prompts">Prompts</a>
+            <a href="#resources">Resources</a>
+            <button id="cta-btn" class="nav-btn">Get Started</button>
+        </nav>
     </header>
 
-    <main>
-        <!-- Hero Section -->
-        <section class="hero">
-            <div class="container hero-content">
-                <div class="hero-badge">🚀 Update 2026: 50+ Tools AI Baru Ditambahkan</div>
-                <h1 class="hero-title">Akselerasi Kerja Anda dengan <span class="gradient-text">Kekuatan AI</span></h1>
-                <p class="hero-subtitle">Eksplorasi ratusan AI tools premium, buat prompt dengan akurasi tinggi, dan pelajari strategi SEO berbasis AI dalam satu platform modern.</p>
-                <div class="hero-cta">
-                    <a href="#tools" class="btn btn-primary btn-lg">Jelajahi Tools</a>
-                    <a href="#prompts" class="btn btn-secondary btn-lg">Coba Prompt Generator</a>
-                </div>
-            </div>
-        </section>
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Scale Your Growth with <span>Artificial Intelligence</span></h1>
+        <p>Your ultimate destination for free AI tools, curated prompts, and expert SEO resources to supercharge your digital presence globally.</p>
+        <div class="hero-buttons">
+            <button class="btn primary" onclick="exploreTools()">Explore Free Tools</button>
+            <button class="btn secondary" onclick="viewPrompts()">Copy Pro Prompts</button>
+        </div>
+    </section>
 
-        <!-- AI Tools Directory Section -->
-        <section id="tools" class="tools-directory section-padding">
-            <div class="container">
-                <div class="section-header">
-                    <h2>🔥 <span class="gradient-text">Top AI Tools</span> Bulan Ini</h2>
-                    <p>Kurasi alat kecerdasan buatan terbaik untuk meningkatkan produktivitas Anda.</p>
-                </div>
-                <div class="tools-grid" id="tools-container">
-                    <!-- Cards will be generated via script.js or static HTML -->
-                    <div class="tool-card glass-panel">
-                        <div class="tool-icon"><i class="fa-solid fa-pen-nib"></i></div>
-                        <h3>ChatGPT 4o</h3>
-                        <p class="tool-desc">Model bahasa tingkat lanjut untuk penulisan, coding, dan analisis.</p>
-                        <div class="tool-meta">
-                            <span class="tag">Text</span>
-                            <span class="tag">Freemium</span>
-                        </div>
-                        <a href="#" class="btn btn-outline">Detail &raquo;</a>
-                    </div>
-                    <!-- Add more tool cards as needed -->
-                </div>
-                <div class="text-center mt-4">
-                    <a href="#" class="btn btn-secondary">Lihat Semua Tools</a>
-                </div>
+    <!-- Features / Content Section -->
+    <section id="tools" class="content-section">
+        <h2>Popular Categories</h2>
+        <div class="grid-container">
+            <div class="card">
+                <h3>⚡ Free AI Tools</h3>
+                <p>Curated list of the best artificial intelligence tools for content creation, marketing, and automation.</p>
+                <button class="card-btn" onclick="alert('AI Tools list coming soon!')">Access Tools</button>
             </div>
-        </section>
-
-        <!-- AI Prompt Generator Section -->
-        <section id="prompts" class="prompt-generator section-padding bg-alt">
-            <div class="container">
-                <div class="generator-wrapper glass-panel">
-                    <div class="generator-header">
-                        <h2>💬 AI <span class="gradient-text">Prompt Generator</span></h2>
-                        <p>Dapatkan hasil maksimal dari AI Anda dengan struktur prompt yang tepat.</p>
-                    </div>
-                    <form class="generator-form" id="promptForm">
-                        <div class="form-group">
-                            <label for="ai-model">Pilih Model AI:</label>
-                            <select id="ai-model" class="form-control">
-                                <option value="chatgpt">ChatGPT / Claude (Teks)</option>
-                                <option value="midjourney">Midjourney / DALL-E (Gambar)</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="task">Apa yang ingin Anda buat?</label>
-                            <input type="text" id="task" class="form-control" placeholder="Contoh: Artikel blog tentang SEO 2026...">
-                        </div>
-                        <div class="form-group">
-                            <label for="tone">Gaya Bahasa / Tone:</label>
-                            <select id="tone" class="form-control">
-                                <option value="professional">Profesional</option>
-                                <option value="casual">Santai & Menarik</option>
-                                <option value="academic">Akademik</option>
-                            </select>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-block">Generate Prompt ⚡</button>
-                    </form>
-                    <div class="result-box hidden" id="resultBox">
-                        <div class="result-header">
-                            <span>Hasil Prompt Anda:</span>
-                            <button class="copy-btn" id="copyBtn"><i class="fa-regular fa-copy"></i> Copy</button>
-                        </div>
-                        <p id="promptResult" class="prompt-text"></p>
-                    </div>
-                </div>
+            <div class="card">
+                <h3>✍️ Pro Prompts</h3>
+                <p>High-converting, tested prompt templates for ChatGPT, Midjourney, and Claude to save hours of work.</p>
+                <button class="card-btn" onclick="alert('Prompts library unlocked!')">View Prompts</button>
             </div>
-        </section>
-
-        <!-- Categories Section -->
-        <section id="categories" class="categories section-padding">
-            <div class="container">
-                <div class="section-header text-center">
-                    <h2>Jelajahi Berdasarkan <span class="gradient-text">Kategori</span></h2>
-                </div>
-                <div class="category-grid">
-                    <a href="#" class="category-card glass-panel">
-                        <i class="fa-solid fa-align-left"></i>
-                        <h3>Copywriting & Teks</h3>
-                        <span>120+ Tools</span>
-                    </a>
-                    <a href="#" class="category-card glass-panel">
-                        <i class="fa-solid fa-image"></i>
-                        <h3>Image Generation</h3>
-                        <span>85+ Tools</span>
-                    </a>
-                    <a href="#" class="category-card glass-panel">
-                        <i class="fa-solid fa-video"></i>
-                        <h3>Video & Animasi</h3>
-                        <span>40+ Tools</span>
-                    </a>
-                    <a href="#" class="category-card glass-panel">
-                        <i class="fa-solid fa-chart-line"></i>
-                        <h3>SEO & Marketing</h3>
-                        <span>60+ Tools</span>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Featured Blog Section -->
-        <section id="blog" class="blog-section section-padding bg-alt">
-            <div class="container">
-                <div class="section-header">
-                    <h2>📚 <span class="gradient-text">Blog & Insights</span></h2>
-                    <a href="#" class="view-all">Lihat Semua Artikel &rarr;</a>
-                </div>
-                <div class="blog-grid">
-                    <article class="blog-card glass-panel">
-                        <div class="blog-img placeholder-img"></div>
-                        <div class="blog-content">
-                            <span class="blog-date">24 Juli 2026</span>
-                            <h3><a href="#">Cara Menggunakan AI untuk Dominasi SEO di Tahun 2026</a></h3>
-                            <p>Strategi terbaru menggabungkan AI content writing dengan topical authority.</p>
-                        </div>
-                    </article>
-                    <article class="blog-card glass-panel">
-                        <div class="blog-img placeholder-img"></div>
-                        <div class="blog-content">
-                            <span class="blog-date">20 Juli 2026</span>
-                            <h3><a href="#">7 Alternatif Midjourney Terbaik untuk Desain Grafis</a></h3>
-                            <p>Bosan dengan limitasi? Berikut adalah rekomendasi generator gambar AI terbaik.</p>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- FAQ Section -->
-        <section id="faq" class="faq-section section-padding">
-            <div class="container">
-                <div class="section-header text-center">
-                    <h2>Pertanyaan yang Sering <span class="gradient-text">Diajukan</span></h2>
-                </div>
-                <div class="faq-wrapper" id="faqAccordion">
-                    <div class="faq-item glass-panel">
-                        <button class="faq-question">Apakah AI Tools Directory ini gratis? <i class="fa-solid fa-chevron-down"></i></button>
-                        <div class="faq-answer">
-                            <p>Ya, direktori kami sepenuhnya gratis untuk diakses. Kami mengkategorikan tools menjadi Gratis, Freemium, dan Berbayar agar Anda mudah memilih.</p>
-                        </div>
-                    </div>
-                    <div class="faq-item glass-panel">
-                        <button class="faq-question">Bagaimana cara kerja Prompt Generator? <i class="fa-solid fa-chevron-down"></i></button>
-                        <div class="faq-answer">
-                            <p>Anda hanya perlu memasukkan tujuan/tugas Anda dan memilih model AI. Sistem kami akan merangkai instruksi kompleks yang dioptimalkan agar AI memberikan jawaban terbaik.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Newsletter Section -->
-        <section class="newsletter section-padding">
-            <div class="container">
-                <div class="newsletter-box glass-panel text-center">
-                    <h2>Tetap Up-to-date dengan <span class="gradient-text">Tren AI</span></h2>
-                    <p>Dapatkan update mingguan tentang tools AI terbaru dan prompt eksklusif langsung ke inbox Anda.</p>
-                    <form class="newsletter-form">
-                        <input type="email" placeholder="Masukkan email Anda..." required>
-                        <button type="submit" class="btn btn-primary">Subscribe</button>
-                    </form>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <a href="index.html" class="logo">
-                        <i class="fa-solid fa-brain"></i>
-                        <span>AI Growth <strong>Hub</strong></span>
-                    </a>
-                    <p>Platform direktori AI dan prompt generator terdepan di Indonesia. Mengakselerasi masa depan produktivitas Anda.</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                        <a href="#"><i class="fa-brands fa-github"></i></a>
-                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                    </div>
-                </div>
-                <div class="footer-links">
-                    <h3>Produk</h3>
-                    <ul>
-                        <li><a href="#tools">Direktori AI</a></li>
-                        <li><a href="#prompts">Prompt Generator</a></li>
-                        <li><a href="#">Submit Tool</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h3>Perusahaan</h3>
-                    <ul>
-                        <li><a href="about.html">Tentang Kami</a></li>
-                        <li><a href="contact.html">Kontak</a></li>
-                        <li><a href="#blog">Blog</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h3>Legal</h3>
-                    <ul>
-                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                        <li><a href="terms.html">Terms of Service</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 AI Growth Hub. All rights reserved.</p>
+            <div class="card">
+                <h3>📈 SEO & Growth</h3>
+                <p>Actionable strategies, frameworks, and resources to scale your audience and organic traffic worldwide.</p>
+                <button class="card-btn" onclick="alert('SEO Resources loaded!')">Read Guides</button>
             </div>
         </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 AI Growth Hub. Built for global creators.</p>
     </footer>
 
-    <!-- Scripts -->
     <script src="script.js"></script>
 </body>
 </html>
