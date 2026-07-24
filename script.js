@@ -6,9 +6,9 @@ function exploreTools() {
     }
 }
 
-// Function for view prompts button
+// Function to navigate to Prompts Page
 function viewPrompts() {
-    alert("Navigating to AI Prompts catalog...");
+    window.location.href = 'prompts.html';
 }
 
 // Interactive listener for navigation CTA button
@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const ctaBtn = document.getElementById('cta-btn');
     if (ctaBtn) {
         ctaBtn.addEventListener('click', () => {
-            alert("Welcome to AI Growth Hub! Stay tuned for global updates.");
+            window.location.href = 'prompts.html';
         });
     }
 });
