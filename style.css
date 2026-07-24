@@ -1,703 +1,214 @@
-/* ==========================================================================
-   1. CSS VARIABLES (Tema Dark Premium)
-   ========================================================================== */
-:root {
-    /* Colors */
-    --bg-dark: #0B0F19; /* Background utama yang sangat gelap */
-    --bg-alt: #111827; /* Background alternatif untuk selingan seksi */
-    --text-primary: #F9FAFB;
-    --text-secondary: #9CA3AF;
-    
-    /* Brand Gradients & Accents */
-    --primary-color: #6366F1; /* Indigo */
-    --secondary-color: #8B5CF6; /* Violet */
-    --accent-color: #3B82F6; /* Blue */
-    --gradient-brand: linear-gradient(135deg, var(--primary-color), var(--secondary-color), var(--accent-color));
-    
-    /* Glassmorphism */
-    --glass-bg: rgba(255, 255, 255, 0.03);
-    --glass-border: rgba(255, 255, 255, 0.08);
-    --glass-hover: rgba(255, 255, 255, 0.06);
-    
-    /* Layout & Spacing */
-    --container-width: 1200px;
-    --border-radius-lg: 20px;
-    --border-radius-md: 12px;
-    --border-radius-sm: 8px;
-    --transition-fast: 0.2s ease;
-    --transition-smooth: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-/* ==========================================================================
-   2. RESET & BASE STYLES
-   ========================================================================== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
-body.dark-theme {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    background-color: var(--bg-dark);
-    color: var(--text-primary);
-    line-height: 1.6;
+body {
+    background-color: #0b0f19;
+    color: #f3f4f6;
     overflow-x: hidden;
     position: relative;
+    min-height: 100vh;
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
-    transition: var(--transition-fast);
-}
-
-ul {
-    list-style: none;
-}
-
-.container {
-    max-width: var(--container-width);
-    margin: 0 auto;
-    padding: 0 24px;
-}
-
-.section-padding {
-    padding: 100px 0;
-}
-
-.bg-alt {
-    background-color: var(--bg-alt);
-}
-
-.text-center {
-    text-align: center;
-}
-
-.mt-4 { margin-top: 2rem; }
-
-/* ==========================================================================
-   3. TYPOGRAPHY & UTILITIES
-   ========================================================================== */
-h1, h2, h3, h4, h5, h6 {
-    font-weight: 700;
-    line-height: 1.2;
-    margin-bottom: 1rem;
-}
-
-.gradient-text {
-    background: var(--gradient-brand);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
-
-.section-header {
-    text-align: center;
-    margin-bottom: 3rem;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.section-header p {
-    color: var(--text-secondary);
-    font-size: 1.1rem;
-}
-
-/* Glassmorphism Panel */
-.glass-panel {
-    background: var(--glass-bg);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border: 1px solid var(--glass-border);
-    border-radius: var(--border-radius-lg);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    transition: var(--transition-smooth);
-}
-
-.glass-panel:hover {
-    background: var(--glass-hover);
-    border-color: rgba(255, 255, 255, 0.15);
-    transform: translateY(-5px);
-}
-
-/* Background Ambient Glows */
-.bg-glow {
+/* Glow Background */
+.glow {
     position: absolute;
-    width: 600px;
-    height: 600px;
-    border-radius: 50%;
+    width: 400px;
+    height: 400px;
+    background: rgba(99, 102, 241, 0.15);
     filter: blur(120px);
     z-index: -1;
-    opacity: 0.4;
-    pointer-events: none;
+    border-radius: 50%;
 }
+.glow-1 { top: -100px; left: -100px; }
+.glow-2 { bottom: -100px; right: -100px; background: rgba(168, 85, 247, 0.15); }
 
-.glow-1 {
-    top: -100px;
-    left: -200px;
-    background: radial-gradient(circle, var(--primary-color) 0%, transparent 70%);
-}
-
-.glow-2 {
-    bottom: 20%;
-    right: -200px;
-    background: radial-gradient(circle, var(--secondary-color) 0%, transparent 70%);
-}
-
-/* ==========================================================================
-   4. BUTTONS
-   ========================================================================== */
-.btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 12px 24px;
-    border-radius: var(--border-radius-sm);
-    font-weight: 600;
-    cursor: pointer;
-    border: none;
-    font-family: inherit;
-    transition: var(--transition-fast);
-}
-
-.btn-primary {
-    background: var(--gradient-brand);
-    color: white;
-    box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
-}
-
-.btn-primary:hover {
-    box-shadow: 0 6px 20px rgba(99, 102, 241, 0.5);
-    transform: translateY(-2px);
-}
-
-.btn-secondary {
-    background: var(--glass-bg);
-    color: var(--text-primary);
-    border: 1px solid var(--glass-border);
-}
-
-.btn-secondary:hover {
-    background: var(--glass-hover);
-    border-color: var(--text-secondary);
-}
-
-.btn-outline {
-    background: transparent;
-    border: 1px solid var(--primary-color);
-    color: var(--primary-color);
-}
-
-.btn-outline:hover {
-    background: var(--primary-color);
-    color: white;
-}
-
-.btn-lg {
-    padding: 16px 32px;
-    font-size: 1.1rem;
-}
-
-.btn-block {
-    width: 100%;
-}
-
-/* ==========================================================================
-   5. NAVBAR
-   ========================================================================== */
+/* Navbar */
 .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    background: rgba(11, 15, 25, 0.8);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--glass-border);
-    padding: 15px 0;
-}
-
-.nav-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 20px 8%;
+    background: rgba(17, 24, 39, 0.7);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 .logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 1.5rem;
-    font-weight: 800;
-}
-
-.logo i {
-    color: var(--primary-color);
-    font-size: 1.8rem;
-}
-
-.nav-links {
-    display: flex;
-    align-items: center;
-    gap: 32px;
-}
-
-.nav-links a:not(.btn) {
-    color: var(--text-secondary);
-    font-weight: 500;
-}
-
-.nav-links a:not(.btn):hover {
-    color: var(--primary-color);
-}
-
-.mobile-menu-btn {
-    display: none;
-    background: transparent;
-    border: none;
-    color: var(--text-primary);
-    font-size: 1.5rem;
-    cursor: pointer;
-}
-
-/* ==========================================================================
-   6. HERO SECTION
-   ========================================================================== */
-.hero {
-    padding-top: 180px;
-    padding-bottom: 100px;
-    text-align: center;
-    min-height: 80vh;
-    display: flex;
-    align-items: center;
-}
-
-.hero-content {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.hero-badge {
-    display: inline-block;
-    padding: 8px 16px;
-    background: rgba(99, 102, 241, 0.1);
-    border: 1px solid rgba(99, 102, 241, 0.3);
-    color: var(--primary-color);
-    border-radius: 50px;
-    font-size: 0.9rem;
-    font-weight: 600;
-    margin-bottom: 24px;
-}
-
-.hero-title {
-    font-size: 4rem;
-    letter-spacing: -1px;
-    margin-bottom: 24px;
-}
-
-.hero-subtitle {
     font-size: 1.25rem;
-    color: var(--text-secondary);
-    margin-bottom: 40px;
-    line-height: 1.8;
+    font-weight: 700;
+    color: #ffffff;
 }
 
-.hero-cta {
-    display: flex;
-    gap: 16px;
-    justify-content: center;
+.logo span {
+    color: #818cf8;
 }
 
-/* ==========================================================================
-   7. AI TOOLS DIRECTORY
-   ========================================================================== */
-.tools-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 24px;
-}
-
-.tool-card {
-    padding: 24px;
-    display: flex;
-    flex-direction: column;
-}
-
-.tool-icon {
-    width: 48px;
-    height: 48px;
-    border-radius: var(--border-radius-sm);
-    background: rgba(99, 102, 241, 0.1);
-    color: var(--primary-color);
+nav {
     display: flex;
     align-items: center;
-    justify-content: center;
-    font-size: 1.5rem;
-    margin-bottom: 16px;
-}
-
-.tool-card h3 {
-    margin-bottom: 8px;
-}
-
-.tool-desc {
-    color: var(--text-secondary);
-    font-size: 0.95rem;
-    margin-bottom: 20px;
-    flex-grow: 1;
-}
-
-.tool-meta {
-    display: flex;
-    gap: 8px;
-    margin-bottom: 20px;
-}
-
-.tag {
-    font-size: 0.8rem;
-    padding: 4px 10px;
-    border-radius: 20px;
-    background: rgba(255, 255, 255, 0.05);
-    color: var(--text-secondary);
-    border: 1px solid var(--glass-border);
-}
-
-/* ==========================================================================
-   8. PROMPT GENERATOR
-   ========================================================================== */
-.generator-wrapper {
-    max-width: 700px;
-    margin: 0 auto;
-    padding: 40px;
-}
-
-.generator-header {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.form-group {
-    margin-bottom: 20px;
-    text-align: left;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: 500;
-    color: var(--text-secondary);
-}
-
-.form-control {
-    width: 100%;
-    padding: 14px 16px;
-    background: rgba(0, 0, 0, 0.2);
-    border: 1px solid var(--glass-border);
-    border-radius: var(--border-radius-sm);
-    color: var(--text-primary);
-    font-family: inherit;
-    font-size: 1rem;
-    transition: var(--transition-fast);
-}
-
-.form-control:focus {
-    outline: none;
-    border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
-}
-
-.result-box {
-    margin-top: 30px;
-    padding: 20px;
-    background: rgba(99, 102, 241, 0.05);
-    border: 1px solid rgba(99, 102, 241, 0.2);
-    border-radius: var(--border-radius-sm);
-}
-
-.result-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 12px;
-    font-weight: 600;
-}
-
-.copy-btn {
-    background: transparent;
-    border: none;
-    color: var(--primary-color);
-    cursor: pointer;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-}
-
-.prompt-text {
-    color: var(--text-primary);
-    font-family: monospace;
-    line-height: 1.5;
-    word-break: break-word;
-}
-
-.hidden {
-    display: none !important;
-}
-
-/* ==========================================================================
-   9. CATEGORIES
-   ========================================================================== */
-.category-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
-
-.category-card {
-    padding: 30px 20px;
-    text-align: center;
-    display: block;
-}
-
-.category-card i {
-    font-size: 2.5rem;
-    color: var(--primary-color);
-    margin-bottom: 16px;
-}
-
-.category-card span {
-    display: block;
-    color: var(--text-secondary);
-    font-size: 0.9rem;
-    margin-top: 8px;
-}
-
-/* ==========================================================================
-   10. BLOG SECTION
-   ========================================================================== */
-.blog-section .section-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    max-width: 100%;
-    text-align: left;
-}
-
-.view-all {
-    color: var(--primary-color);
-    font-weight: 600;
-}
-
-.blog-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 30px;
 }
 
-.blog-card {
-    overflow: hidden;
-    padding: 0;
+nav a {
+    color: #9ca3af;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.2s;
 }
 
-.blog-img {
-    height: 200px;
-    background: var(--glass-hover);
+nav a:hover {
+    color: #ffffff;
 }
 
-.blog-content {
-    padding: 24px;
+.nav-btn {
+    background: #4f46e5;
+    color: white;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
 }
 
-.blog-date {
-    font-size: 0.85rem;
-    color: var(--primary-color);
-    margin-bottom: 8px;
-    display: block;
+.nav-btn:hover {
+    background: #4338ca;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 100px 20px 60px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    background: linear-gradient(to right, #818cf8, #c084fc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+    color: #9ca3af;
+    font-size: 1.1rem;
+    margin-bottom: 35px;
+    line-height: 1.6;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.btn {
+    padding: 12px 24px;
+    border-radius: 10px;
     font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: transform 0.2s, opacity 0.2s;
 }
 
-.blog-content h3 {
+.btn:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+.btn.primary {
+    background: #4f46e5;
+    color: white;
+}
+
+.btn.secondary {
+    background: rgba(255, 255, 255, 0.05);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+/* Content Section & Cards */
+.content-section {
+    padding: 60px 8%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.content-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: rgba(17, 24, 39, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 16px;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(129, 140, 248, 0.3);
+}
+
+.card h3 {
     font-size: 1.25rem;
     margin-bottom: 12px;
 }
 
-.blog-content h3 a:hover {
-    color: var(--primary-color);
-}
-
-.blog-content p {
-    color: var(--text-secondary);
+.card p {
+    color: #9ca3af;
     font-size: 0.95rem;
-}
-
-/* ==========================================================================
-   11. FAQ & NEWSLETTER
-   ========================================================================== */
-.faq-wrapper {
-    max-width: 800px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-}
-
-.faq-item {
-    padding: 0;
-    overflow: hidden;
-}
-
-.faq-question {
-    width: 100%;
-    text-align: left;
-    padding: 20px 24px;
-    background: transparent;
-    border: none;
-    color: var(--text-primary);
-    font-size: 1.1rem;
-    font-weight: 600;
-    font-family: inherit;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.faq-answer {
-    padding: 0 24px 20px 24px;
-    color: var(--text-secondary);
-    display: none; /* Akan diatur via JS */
-}
-
-.newsletter-box {
-    max-width: 700px;
-    margin: 0 auto;
-    padding: 50px;
-}
-
-.newsletter-form {
-    display: flex;
-    gap: 12px;
-    margin-top: 24px;
-}
-
-.newsletter-form input {
-    flex-grow: 1;
-    padding: 14px 20px;
-    border-radius: var(--border-radius-sm);
-    border: 1px solid var(--glass-border);
-    background: rgba(0, 0, 0, 0.2);
-    color: white;
-}
-
-/* ==========================================================================
-   12. FOOTER
-   ========================================================================== */
-.footer {
-    border-top: 1px solid var(--glass-border);
-    padding: 80px 0 30px;
-    background: #070a12;
-}
-
-.footer-grid {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr;
-    gap: 40px;
-    margin-bottom: 60px;
-}
-
-.footer-brand p {
-    color: var(--text-secondary);
-    margin: 20px 0;
-    font-size: 0.95rem;
-}
-
-.social-links {
-    display: flex;
-    gap: 16px;
-}
-
-.social-links a {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: var(--glass-bg);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid var(--glass-border);
-}
-
-.social-links a:hover {
-    background: var(--primary-color);
-    border-color: var(--primary-color);
-}
-
-.footer-links h3 {
-    font-size: 1.1rem;
+    line-height: 1.5;
     margin-bottom: 20px;
 }
 
-.footer-links ul {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
+.card-btn {
+    background: transparent;
+    color: #818cf8;
+    border: 1px solid #4f46e5;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.2s, color 0.2s;
 }
 
-.footer-links a {
-    color: var(--text-secondary);
-    font-size: 0.95rem;
+.card-btn:hover {
+    background: #4f46e5;
+    color: white;
 }
 
-.footer-links a:hover {
-    color: var(--primary-color);
-    padding-left: 5px;
-}
-
-.footer-bottom {
+/* Footer */
+footer {
     text-align: center;
-    padding-top: 30px;
-    border-top: 1px solid var(--glass-border);
-    color: var(--text-secondary);
+    padding: 40px;
+    color: #6b7280;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    margin-top: 60px;
     font-size: 0.9rem;
-}
-
-/* ==========================================================================
-   13. RESPONSIVE MEDIA QUERIES
-   ========================================================================== */
-@media (max-width: 992px) {
-    .hero-title { font-size: 3rem; }
-    .footer-grid { grid-template-columns: 1fr 1fr; }
-    .hero { padding-top: 150px; }
-}
-
-@media (max-width: 768px) {
-    .nav-links {
-        display: none; /* Akan ditangani di JS untuk mobile menu */
-    }
-    
-    .mobile-menu-btn {
-        display: block;
-    }
-    
-    .hero-title { font-size: 2.5rem; }
-    
-    .hero-cta { flex-direction: column; }
-    
-    .newsletter-form { flex-direction: column; }
-    
-    .footer-grid { grid-template-columns: 1fr; }
-    
-    .blog-section .section-header {
-        flex-direction: column;
-        align-items: center;
-        gap: 16px;
-        text-align: center;
-    }
 }
