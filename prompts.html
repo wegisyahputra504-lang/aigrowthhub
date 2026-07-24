@@ -3,82 +3,158 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Prompts Library | AI Growth Hub</title>
-    <meta name="description" content="Copy high-converting AI prompts for ChatGPT, Claude, and Midjourney to boost your productivity.">
-    <link rel="stylesheet" href="style.css">
+    <title>AI Prompts Vault | AI Growth Hub</title>
+    <meta name="description" content="Explore masterclass AI prompts for SEO content writing, viral TikTok marketing, and high-ticket sales conversion.">
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: rgba(30, 41, 59, 0.7);
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --accent: #38bdf8;
+            --accent-gradient: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%);
+            --border: rgba(255, 255, 255, 0.1);
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; }
+        body { background-color: var(--bg-color); color: var(--text-primary); line-height: 1.6; }
+        
+        header {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 20px 8%; border-bottom: 1px solid var(--border);
+            backdrop-filter: blur(10px); position: sticky; top: 0; z-index: 100;
+            background: rgba(15, 23, 42, 0.85);
+        }
+        .logo { font-size: 1.5rem; font-weight: 800; background: var(--accent-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-decoration: none; }
+        nav a { color: var(--text-secondary); text-decoration: none; margin-left: 25px; font-weight: 500; transition: color 0.3s; }
+        nav a:hover, nav a.active { color: var(--accent); }
+
+        .container { max-width: 1000px; margin: 50px auto; padding: 0 20px 100px; }
+        .page-header { text-align: center; margin-bottom: 40px; }
+        .page-header h1 { font-size: 2.8rem; font-weight: 900; margin-bottom: 15px; }
+        .page-header p { color: var(--text-secondary); font-size: 1.1rem; }
+
+        .search-box {
+            width: 100%; padding: 15px 20px; font-size: 1rem; background: var(--card-bg);
+            border: 1px solid var(--border); border-radius: 12px; color: #fff; margin-bottom: 40px;
+            outline: none; transition: border-color 0.3s;
+        }
+        .search-box:focus { border-color: var(--accent); }
+
+        .prompt-card {
+            background: var(--card-bg); border: 1px solid var(--border); border-radius: 16px;
+            padding: 25px; margin-bottom: 25px; backdrop-filter: blur(10px);
+        }
+        .prompt-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; }
+        .prompt-title { font-size: 1.25rem; font-weight: 700; color: #fff; }
+        .category-tag { background: rgba(129, 140, 248, 0.15); color: #818cf8; padding: 4px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: 600; }
+        
+        pre {
+            background: #090d16; padding: 20px; border-radius: 8px; color: #cbd5e1;
+            font-family: 'Fira Code', monospace; font-size: 0.9rem; white-space: pre-wrap; word-break: break-word;
+            border: 1px solid rgba(255,255,255,0.05); margin-bottom: 15px; max-height: 200px; overflow-y: auto;
+        }
+        
+        .prompt-footer { display: flex; justify-content: space-between; align-items: center; }
+        .copy-btn {
+            background: var(--accent-gradient); color: #0f172a; border: none; padding: 8px 18px;
+            font-weight: 600; border-radius: 6px; cursor: pointer; transition: opacity 0.2s;
+        }
+        .copy-btn:hover { opacity: 0.9; }
+        
+        .affiliate-tip { font-size: 0.85rem; color: var(--text-secondary); }
+        .affiliate-tip a { color: var(--accent); text-decoration: none; }
+        
+        footer { text-align: center; padding: 40px; border-top: 1px solid var(--border); color: var(--text-secondary); font-size: 0.9rem; }
+    </style>
 </head>
 <body>
-    <!-- Glow Background -->
-    <div class="glow glow-1"></div>
-    <div class="glow glow-2"></div>
-
-    <!-- Navbar -->
-    <header class="navbar">
-        <div class="logo">AI Growth <span>Hub</span></div>
+    <header>
+        <a href="index.html" class="logo">AI Growth Hub</a>
         <nav>
             <a href="index.html">Home</a>
-            <a href="prompts.html" class="active">Prompts</a>
-            <a href="index.html#tools">Tools</a>
-            <button onclick="location.href='index.html'" class="nav-btn">Back to Home</button>
+            <a href="prompts.html" class="active">AI Prompts Vault</a>
         </nav>
     </header>
 
-    <!-- Main Content -->
-    <section class="content-section">
-        <div style="text-align: center; margin-bottom: 40px;">
-            <h1 style="font-size: 2.5rem; margin-bottom: 15px;">Pro AI Prompts Library</h1>
-            <p style="color: #9ca3af; max-width: 600px; margin: 0 auto;">Copy tested, high-converting prompts designed to supercharge your content creation, marketing, and workflow.</p>
+    <div class="container">
+        <div class="page-header">
+            <h1>Elite AI Prompts Vault</h1>
+            <p>High-converting engineering prompts tested for global SEO dominance and digital marketing revenue.</p>
         </div>
 
-        <!-- Prompts Grid -->
-        <div class="grid-container">
-            <!-- Prompt Card 1 -->
-            <div class="card">
-                <h3>✍️ Viral TikTok Script Writer</h3>
-                <p><strong>Use for:</strong> ChatGPT / Claude</p>
-                <p style="color: #d1d5db; font-style: italic; margin-bottom: 15px;">"Act as a professional TikTok growth expert. Write a 20-second engaging video script about [Product/Topic] with a killer hook in the first 3 seconds..."</p>
-                <button class="card-btn" onclick="copyPrompt(this, 'Act as a professional TikTok growth expert. Write a 20-second engaging video script about [Product/Topic] with a killer hook in the first 3 seconds...')">Copy Prompt</button>
+        <input type="text" id="searchInput" class="search-box" placeholder="Search prompts by keyword (e.g. SEO, TikTok, Copywriting)..." onkeyup="filterPrompts()">
+
+        <div id="promptList">
+            <div class="prompt-card" data-tags="seo traffic content blogging">
+                <div class="prompt-header">
+                    <div class="prompt-title">Global SEO Content Engine Blueprint</div>
+                    <span class="category-tag">SEO & Traffic</span>
+                </div>
+                <pre id="code1">Act as an elite Senior SEO Architect and Content Strategist. Create a comprehensive, authoritative, 3000-word long-form article outline targeting the keyword "[INSERT KEYWORD]". Optimize for Google's Helpful Content System, incorporate E-E-A-T signals, include semantic LSI keywords, structured FAQ schemas, and natural transition points to integrate software affiliate tool recommendations like Writesonic or Notion AI.</pre>
+                <div class="prompt-footer">
+                    <button class="copy-btn" onclick="copyPrompt('code1', this)">Copy Prompt</button>
+                    <span class="affiliate-tip">Scale this using <a href="https://affiliate.link/writesonic-placeholder" target="_blank">Writesonic AI &nearr;</a></span>
+                </div>
             </div>
 
-            <!-- Prompt Card 2 -->
-            <div class="card">
-                <h3>📈 High-Converting SEO Outline</h3>
-                <p><strong>Use for:</strong> ChatGPT / Claude</p>
-                <p style="color: #d1d5db; font-style: italic; margin-bottom: 15px;">"Create an SEO-optimized blog post outline targeting the keyword [Keyword]. Include H2, H3 headers, search intent analysis, and FAQ suggestions."</p>
-                <button class="card-btn" onclick="copyPrompt(this, 'Create an SEO-optimized blog post outline targeting the keyword [Keyword]. Include H2, H3 headers, search intent analysis, and FAQ suggestions.')">Copy Prompt</button>
+            <div class="prompt-card" data-tags="tiktok video marketing viral">
+                <div class="prompt-header">
+                    <div class="prompt-title">Viral TikTok & Reels Video Ad Script (Global Audience)</div>
+                    <span class="category-tag">Video Marketing</span>
+                </div>
+                <pre id="code2">Act as a direct-response video marketing expert. Write a 30-second high-retention video script for a SaaS productivity tool targeting remote workers and creators worldwide. Include a 3-second psychological hook, problem-agitation-solution framework, visual direction cues for AI avatar generators like Synthesia, and a high-converting call to action.</pre>
+                <div class="prompt-footer">
+                    <button class="copy-btn" onclick="copyPrompt('code2', this)">Copy Prompt</button>
+                    <span class="affiliate-tip">Automate with <a href="https://affiliate.link/synthesia-placeholder" target="_blank">Synthesia AI &nearr;</a></span>
+                </div>
             </div>
 
-            <!-- Prompt Card 3 -->
-            <div class="card">
-                <h3>🎨 Stunning Midjourney v6 Style</h3>
-                <p><strong>Use for:</strong> Midjourney</p>
-                <p style="color: #d1d5db; font-style: italic; margin-bottom: 15px;">"A futuristic cyberpunk workspace setup, dark glassmorphism aesthetic, neon purple and indigo ambient glow, ultra-realistic, 8k resolution --ar 16:9 --v 6.0"</p>
-                <button class="card-btn" onclick="copyPrompt(this, 'A futuristic cyberpunk workspace setup, dark glassmorphism aesthetic, neon purple and indigo ambient glow, ultra-realistic, 8k resolution --ar 16:9 --v 6.0')">Copy Prompt</button>
+            <div class="prompt-card" data-tags="workspace productivity monetization systems">
+                <div class="prompt-header">
+                    <div class="prompt-title">Digital Business & Knowledge Hub Architecture</div>
+                    <span class="category-tag">Workspace & Monetization</span>
+                </div>
+                <pre id="code3">Act as a Silicon Valley startup architect. Design a comprehensive database schema and automated knowledge workspace for managing multi-channel digital assets, SEO content pipelines, and affiliate marketing tracking across international markets.</pre>
+                <div class="prompt-footer">
+                    <button class="copy-btn" onclick="copyPrompt('code3', this)">Copy Prompt</button>
+                    <span class="affiliate-tip">Build on <a href="https://affiliate.link/notion-placeholder" target="_blank">Notion AI &nearr;</a></span>
+                </div>
             </div>
         </div>
-    </section>
+    </div>
 
-    <!-- Footer -->
     <footer>
-        <p>&copy; 2026 AI Growth Hub. Built for global creators.</p>
+        <p>&copy; 2026 AI Growth Hub. Global Traffic & Monetization Hub. All rights reserved.</p>
     </footer>
 
     <script>
-        // Fungsi otomatis salin teks prompt ke clipboard
-        function copyPrompt(button, textToCopy) {
-            navigator.clipboard.writeText(textToCopy).then(() => {
-                let originalText = button.innerText;
-                button.innerText = "Copied! ✓";
-                button.style.background = "#4f46e5";
-                button.style.color = "white";
+        function copyPrompt(elementId, btn) {
+            const text = document.getElementById(elementId).innerText;
+            navigator.clipboard.writeText(text).then(() => {
+                const originalText = btn.innerText;
+                btn.innerText = 'Copied!';
+                btn.style.background = '#10b981';
+                btn.style.color = '#fff';
                 setTimeout(() => {
-                    button.innerText = originalText;
-                    button.style.background = "transparent";
-                    button.style.color = "#818cf8";
+                    btn.innerText = originalText;
+                    btn.style.background = '';
+                    btn.style.color = '';
                 }, 2000);
-            }).catch(err => {
-                alert("Failed to copy text.");
             });
+        }
+
+        function filterPrompts() {
+            let input = document.getElementById('searchInput').value.toLowerCase();
+            let cards = document.getElementsByClassName('prompt-card');
+            for (let i = 0; i < cards.length; i++) {
+                let tags = cards[i].getAttribute('data-tags');
+                let text = cards[i].innerText.toLowerCase();
+                if (tags.includes(input) || text.includes(input)) {
+                    cards[i].style.display = "";
+                } else {
+                    cards[i].style.display = "none";
+                }
+            }
         }
     </script>
 </body>
