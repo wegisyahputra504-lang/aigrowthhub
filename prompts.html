@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Prompts Library | AI Growth Hub</title>
+    <meta name="description" content="Copy high-converting AI prompts for ChatGPT, Claude, and Midjourney to boost your productivity.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Glow Background -->
+    <div class="glow glow-1"></div>
+    <div class="glow glow-2"></div>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo">AI Growth <span>Hub</span></div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="prompts.html" class="active">Prompts</a>
+            <a href="index.html#tools">Tools</a>
+            <button onclick="location.href='index.html'" class="nav-btn">Back to Home</button>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <section class="content-section">
+        <div style="text-align: center; margin-bottom: 40px;">
+            <h1 style="font-size: 2.5rem; margin-bottom: 15px;">Pro AI Prompts Library</h1>
+            <p style="color: #9ca3af; max-width: 600px; margin: 0 auto;">Copy tested, high-converting prompts designed to supercharge your content creation, marketing, and workflow.</p>
+        </div>
+
+        <!-- Prompts Grid -->
+        <div class="grid-container">
+            <!-- Prompt Card 1 -->
+            <div class="card">
+                <h3>✍️ Viral TikTok Script Writer</h3>
+                <p><strong>Use for:</strong> ChatGPT / Claude</p>
+                <p style="color: #d1d5db; font-style: italic; margin-bottom: 15px;">"Act as a professional TikTok growth expert. Write a 20-second engaging video script about [Product/Topic] with a killer hook in the first 3 seconds..."</p>
+                <button class="card-btn" onclick="copyPrompt(this, 'Act as a professional TikTok growth expert. Write a 20-second engaging video script about [Product/Topic] with a killer hook in the first 3 seconds...')">Copy Prompt</button>
+            </div>
+
+            <!-- Prompt Card 2 -->
+            <div class="card">
+                <h3>📈 High-Converting SEO Outline</h3>
+                <p><strong>Use for:</strong> ChatGPT / Claude</p>
+                <p style="color: #d1d5db; font-style: italic; margin-bottom: 15px;">"Create an SEO-optimized blog post outline targeting the keyword [Keyword]. Include H2, H3 headers, search intent analysis, and FAQ suggestions."</p>
+                <button class="card-btn" onclick="copyPrompt(this, 'Create an SEO-optimized blog post outline targeting the keyword [Keyword]. Include H2, H3 headers, search intent analysis, and FAQ suggestions.')">Copy Prompt</button>
+            </div>
+
+            <!-- Prompt Card 3 -->
+            <div class="card">
+                <h3>🎨 Stunning Midjourney v6 Style</h3>
+                <p><strong>Use for:</strong> Midjourney</p>
+                <p style="color: #d1d5db; font-style: italic; margin-bottom: 15px;">"A futuristic cyberpunk workspace setup, dark glassmorphism aesthetic, neon purple and indigo ambient glow, ultra-realistic, 8k resolution --ar 16:9 --v 6.0"</p>
+                <button class="card-btn" onclick="copyPrompt(this, 'A futuristic cyberpunk workspace setup, dark glassmorphism aesthetic, neon purple and indigo ambient glow, ultra-realistic, 8k resolution --ar 16:9 --v 6.0')">Copy Prompt</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 AI Growth Hub. Built for global creators.</p>
+    </footer>
+
+    <script>
+        // Fungsi otomatis salin teks prompt ke clipboard
+        function copyPrompt(button, textToCopy) {
+            navigator.clipboard.writeText(textToCopy).then(() => {
+                let originalText = button.innerText;
+                button.innerText = "Copied! ✓";
+                button.style.background = "#4f46e5";
+                button.style.color = "white";
+                setTimeout(() => {
+                    button.innerText = originalText;
+                    button.style.background = "transparent";
+                    button.style.color = "#818cf8";
+                }, 2000);
+            }).catch(err => {
+                alert("Failed to copy text.");
+            });
+        }
+    </script>
+</body>
+</html>
