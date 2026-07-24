@@ -3,9 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Growth Hub | Free AI Tools, Prompts & Creator Resources</title>
-    <meta name="description" content="Discover free AI tools, high-converting prompts, SEO resources, and growth strategies for digital creators and businesses.">
+    <title>AI Growth Hub | Free AI Tools, Prompts & Global Growth Resources</title>
+    <meta name="description" content="Discover the best free AI tools, high-converting prompts, and growth strategies for creators, marketers, and businesses worldwide.">
+    <meta name="keywords" content="AI tools, free AI prompts, ChatGPT prompts, digital marketing, AI growth hub, productivity tools">
     <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts untuk kesan profesional -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Background Glow Effects -->
@@ -16,50 +19,87 @@
     <header class="navbar">
         <div class="logo">AI Growth <span>Hub</span></div>
         <nav>
-            <a href="#tools">Tools</a>
-            <a href="#prompts">Prompts</a>
-            <a href="#resources">Resources</a>
-            <button id="cta-btn" class="nav-btn">Get Started</button>
+            <a href="index.html" class="active">Home</a>
+            <a href="prompts.html">Prompts Library</a>
+            <a href="#tools-directory">AI Directory</a>
+            <button onclick="location.href='prompts.html'" class="nav-btn">Explore Prompts</button>
         </nav>
     </header>
 
     <!-- Hero Section -->
     <section class="hero">
-        <h1>Scale Your Growth with <span>Artificial Intelligence</span></h1>
-        <p>Your ultimate destination for free AI tools, curated prompts, and expert SEO resources to supercharge your digital presence globally.</p>
-        <div class="hero-buttons">
-            <button class="btn primary" onclick="exploreTools()">Explore Free Tools</button>
-            <button class="btn secondary" onclick="viewPrompts()">Copy Pro Prompts</button>
+        <div class="badge">🚀 The #1 Resource for AI Creators & Marketers</div>
+        <h1>Supercharge Your Workflow with <span>Artificial Intelligence</span></h1>
+        <p>Your ultimate global gateway to top-tier AI tools, engineered prompts, and organic growth strategies designed to scale your digital presence.</p>
+        
+        <!-- Search Bar untuk Pengunjung Global -->
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Search AI tools, prompts, or categories (e.g., ChatGPT, Midjourney)..." onkeyup="searchFilter()">
         </div>
     </section>
 
-    <!-- Features / Content Section -->
-    <section id="tools" class="content-section">
-        <h2>Popular Categories</h2>
-        <div class="grid-container">
-            <div class="card">
-                <h3>⚡ Free AI Tools</h3>
-                <p>Curated list of the best artificial intelligence tools for content creation, marketing, and automation.</p>
-                <button class="card-btn" onclick="alert('AI Tools list coming soon!')">Access Tools</button>
+    <!-- Featured Categories / Global AI Tools Directory -->
+    <section id="tools-directory" class="content-section">
+        <h2>Popular Global AI Categories</h2>
+        <div class="grid-container" id="toolCards">
+            
+            <div class="card" data-name="chatgpt openai writing content">
+                <h3>💬 AI Writing & Copywriting</h3>
+                <p>Top-rated tools like ChatGPT, Claude, and Copy.ai to generate blogs, emails, and marketing copy effortlessly.</p>
+                <a href="https://chatgpt.com" target="_blank" rel="nofollow" class="card-btn">Visit Tool (External)</a>
             </div>
-            <div class="card">
-                <h3>✍️ Pro Prompts</h3>
-                <p>High-converting, tested prompt templates for ChatGPT, Midjourney, and Claude to save hours of work.</p>
-                <button class="card-btn" onclick="alert('Prompts library unlocked!')">View Prompts</button>
+
+            <div class="card" data-name="midjourney image generation art design">
+                <h3>🎨 AI Image & Art Generators</h3>
+                <p>Create stunning visuals, assets, and graphics using Midjourney, DALL-E 3, and Stable Diffusion.</p>
+                <a href="https://www.midjourney.com" target="_blank" rel="nofollow" class="card-btn">Visit Tool (External)</a>
             </div>
-            <div class="card">
-                <h3>📈 SEO & Growth</h3>
-                <p>Actionable strategies, frameworks, and resources to scale your audience and organic traffic worldwide.</p>
-                <button class="card-btn" onclick="alert('SEO Resources loaded!')">Read Guides</button>
+
+            <div class="card" data-name="video editing ai creation">
+                <h3>🎬 AI Video & Animation</h3>
+                <p>Scale your video creation for TikTok, YouTube, and Reels using cutting-edge AI video synthesis tools.</p>
+                <a href="https://www.runwayml.com" target="_blank" rel="nofollow" class="card-btn">Visit Tool (External)</a>
             </div>
+
+            <div class="card" data-name="seo marketing growth business">
+                <h3>📈 SEO & Growth Automation</h3>
+                <p>Data-driven frameworks and AI analytics to boost your organic traffic and rank higher on Google worldwide.</p>
+                <a href="prompts.html" class="card-btn">View SEO Prompts</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Monetization / Banner Section (Peluang Penghasilan) -->
+    <section class="content-section" style="padding-top: 0;">
+        <div class="banner-box">
+            <h3>💼 Want to Partner or Promote Your AI Tool?</h3>
+            <p>Get your software or digital product in front of thousands of global creators and digital marketers visiting AI Growth Hub.</p>
+            <button class="btn primary" onclick="alert('Contact us at: partner@aigrowthhub.vercel.app for sponsorships & ads.')">Get Featured</button>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2026 AI Growth Hub. Built for global creators.</p>
+        <p>&copy; 2026 AI Growth Hub. Empowering creators globally.</p>
+        <p style="font-size: 0.8rem; margin-top: 10px; color: #4b5563;">Disclaimer: Some links on this site may be affiliate links supporting our free platform.</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        // Fitur Pencarian Canggih untuk Pengguna
+        function searchFilter() {
+            let input = document.getElementById('searchInput').value.toLowerCase();
+            let cards = document.getElementsByClassName('card');
+            
+            for (let i = 0; i < cards.length; i++) {
+                let name = cards[i].getAttribute('data-name');
+                if (name.includes(input)) {
+                    cards[i].style.display = "block";
+                } else {
+                    cards[i].style.display = "none";
+                }
+            }
+        }
+    </script>
 </body>
 </html>
